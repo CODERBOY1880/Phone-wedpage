@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-wedpage</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="./phone/logo.png" alt="logo">
+            </div>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accersories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="info">
+            <div class="overlay">
+
+            </div>
+            <img src="./phone/mobile.png" alt="" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="./phone/camera.png" alt="">
+                    <div>
+                        <h1>Cammera</h1>
+                        <p>12mp, wide angle lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="./phone/processor.png" alt="">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdragon Octa-ccore 11nm</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="./phone/display.png" alt="">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5 Mini-Drop Fullscreen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="./phone/battery.png" alt="">
+                    <div>
+                        <h1>Battery life</h1>
+                        <p>5000mAh, 720Hrs standby</p>
+                    </div>
+                </div>
+            </div>
+            <div class="control">
+                <img src="./phone/arrow.png" alt="" id="upbtn">
+                <h3>features</h3>
+                <img src="./phone/arrow.png" alt="" id="downbtn">
+            </div>
+        </div>
+    </div>
+    <script>
+        var circle = document.getElementById("circle")
+        var upbtn = document.getElementById("upbtn")
+        var downbtn = document.getElementById("downbtn")
+
+        var rotatevalue = circle.style.transform;
+        var rotatesum;
+
+        upbtn.onclick =function(){
+            rotatesum = rotatevalue  + "rotate(-90deg)";
+            circle.style.transform = rotatesum;
+            rotatevalue = rotatesum;
+        }
+        downbtn.onclick =function(){
+            rotatesum = rotatevalue  + "rotate(90deg)";
+            circle.style.transform = rotatesum;
+            rotatevalue = rotatesum;
+        }
+    </script>
+</body>
+</html>
